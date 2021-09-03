@@ -167,8 +167,14 @@ h6 {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out
 }
+/* ------------------------------------------------------------- */
 
-
+.user-email {
+    color: gray;
+}
+.left-padding{
+    padding-left: 50px;
+}
 .books-bg{
     background-image: url('https://pangaeasbox.github.io/images/bg.jpg');
 }

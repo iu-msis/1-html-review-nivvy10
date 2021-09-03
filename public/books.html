@@ -7,27 +7,29 @@
 
 <head>
     <title>Book Library</title>
+    <!-- Adding CSS stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap V6 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+    <!-- Nav Bar -->
     <div class="container">
-        <header class="d-flex justify-content-end py-3 mb-4 border-bottom">
+        <header class="d-flex justify-content-center py-3 mb-4 border-bottom">
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">User</a></li>
                 <li class="nav-item"><a href="books.html" class="nav-link active">Books</a></li>
             </ul>
         </header>
     </div>
-    <!-- <div class="b-example-divider"></div> -->
 </head>
-
 <body>
-    <!-- <p>Your content goes here.</p> -->
+    <!-- Table with Book Details -->
     <div class="padding">
         <table class="table table-bordered border-primary">
+            <!-- Table Column Headers -->
             <thead class="p-3 mb-2 bg-primary text-white">
                 <tr>
                     <th scope="col">#</th>
@@ -39,10 +41,12 @@
                     <th scope="col">MSRP</th>
                 </tr>
             </thead>
+            <!-- Adding Book information -->
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td><a href="https://images.gr-assets.com/books/1371652590m/15839984.jpg"><img id="book-img" src="https://images.gr-assets.com/books/1371652590m/15839984.jpg"></a></td>
+                    <td><a href="https://images.gr-assets.com/books/1371652590m/15839984.jpg"><img id="book-img"
+                                src="https://images.gr-assets.com/books/1371652590m/15839984.jpg"></a></td>
                     <td>Cruel Beauty</td>
                     <td>Rosamund Hodge</td>
                     <td>2014</td>
@@ -51,7 +55,8 @@
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td><a href="https://images-na.ssl-images-amazon.com/images/I/515dn0G7urL.jpg"><img id="book-img" src="https://images-na.ssl-images-amazon.com/images/I/515dn0G7urL.jpg"></a></td>
+                    <td><a href="https://images-na.ssl-images-amazon.com/images/I/515dn0G7urL.jpg"><img id="book-img"
+                                src="https://images-na.ssl-images-amazon.com/images/I/515dn0G7urL.jpg"></a></td>
                     <td>A Beautiful Mind</td>
                     <td>Sylvia Nasar</td>
                     <td>1998</td>
@@ -60,7 +65,11 @@
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td><a href="https://images-na.ssl-images-amazon.com/images/I/51gHjDpGdvL._SX312_BO1,204,203,200_.jpg"><img id="book-img" src="https://images-na.ssl-images-amazon.com/images/I/51gHjDpGdvL._SX312_BO1,204,203,200_.jpg"></a></td>
+                    <td><a
+                            href="https://images-na.ssl-images-amazon.com/images/I/51gHjDpGdvL._SX312_BO1,204,203,200_.jpg"><img
+                                id="book-img"
+                                src="https://images-na.ssl-images-amazon.com/images/I/51gHjDpGdvL._SX312_BO1,204,203,200_.jpg"></a>
+                    </td>
 
                     <td>The Voyages of Doctor Dolittle</td>
                     <td>Hugh Lofting, Michael Hague</td>
@@ -70,7 +79,8 @@
                 </tr>
                 <tr>
                     <th scope="row">4</th>
-                    <td><a href="https://images-na.ssl-images-amazon.com/images/I/71Zke+xZ+2L.jpg"><img id="book-img" src="https://images-na.ssl-images-amazon.com/images/I/71Zke+xZ+2L.jpg"></a></td>
+                    <td><a href="https://images-na.ssl-images-amazon.com/images/I/71Zke+xZ+2L.jpg"><img id="book-img"
+                                src="https://images-na.ssl-images-amazon.com/images/I/71Zke+xZ+2L.jpg"></a></td>
 
                     <td>Blaze</td>
                     <td>Richard Bachman, Stephen King</td>
@@ -80,7 +90,11 @@
                 </tr>
                 <tr>
                     <th scope="row">5</th>
-                    <td><a href="https://images-na.ssl-images-amazon.com/images/I/514bBOeVp4L._SX303_BO1,204,203,200_.jpg"><img id="book-img" src="https://images-na.ssl-images-amazon.com/images/I/514bBOeVp4L._SX303_BO1,204,203,200_.jpg"></a></td>
+                    <td><a
+                            href="https://images-na.ssl-images-amazon.com/images/I/514bBOeVp4L._SX303_BO1,204,203,200_.jpg"><img
+                                id="book-img"
+                                src="https://images-na.ssl-images-amazon.com/images/I/514bBOeVp4L._SX303_BO1,204,203,200_.jpg"></a>
+                    </td>
 
                     <td>The Portrait of a Lady</td>
                     <td>Henry James, Patricia Crick</td>
@@ -90,7 +104,8 @@
                 </tr>
                 <tr>
                     <th scope="row">6</th>
-                    <td><a href="https://m.media-amazon.com/images/I/5173hbKPVDL.jpg"><img id="book-img" src="https://m.media-amazon.com/images/I/5173hbKPVDL.jpg"></a></td>
+                    <td><a href="https://m.media-amazon.com/images/I/5173hbKPVDL.jpg"><img id="book-img"
+                                src="https://m.media-amazon.com/images/I/5173hbKPVDL.jpg"></a></td>
 
                     <td>The Time Paradox</td>
                     <td>Eoin Colfer</td>
@@ -100,7 +115,8 @@
                 </tr>
                 <tr>
                     <th scope="row">7</th>
-                    <td><a href="https://images-na.ssl-images-amazon.com/images/I/81LSr4CwBhL.jpg"><img id="book-img" src="https://images-na.ssl-images-amazon.com/images/I/81LSr4CwBhL.jpg"></a></td>
+                    <td><a href="https://images-na.ssl-images-amazon.com/images/I/81LSr4CwBhL.jpg"><img id="book-img"
+                                src="https://images-na.ssl-images-amazon.com/images/I/81LSr4CwBhL.jpg"></a></td>
 
                     <td>Unnatural Exposure</td>
                     <td>Patricia Cornwell</td>
@@ -110,7 +126,8 @@
                 </tr>
                 <tr>
                     <th scope="row">8</th>
-                    <td><a href="https://images.penguinrandomhouse.com/cover/9780345539434"><img id="book-img" src="https://images.penguinrandomhouse.com/cover/9780345539434"></a></td>
+                    <td><a href="https://images.penguinrandomhouse.com/cover/9780345539434"><img id="book-img"
+                                src="https://images.penguinrandomhouse.com/cover/9780345539434"></a></td>
 
                     <td>Cosmos</td>
                     <td>Carl Sagan</td>
@@ -121,17 +138,16 @@
             </tbody>
         </table>
     </div>
-    <!-- <div class="p-3 mb-2 bg-primary text-white"> -->
-    <div class="padding">
+    <!-- Form to enter new book details -->
+    <div class="left-padding">
         <form class="row gy-2 gx-3 align-items-center">
-                <div class="col-auto">
-                    
-                        <label class="visually-hidden" for="autoSizingInput">Image URL</label>
-                        <div class="input-group">
-                        <input type="text" class="form-control" id="autoSizingInput" placeholder="Book Image Url">
-                        <div class="input-group-text">.com</div>
-                        </div>
-                    </div>
+            <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingInput">Image URL</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="autoSizingInput" placeholder="Book Image Url">
+                    <div class="input-group-text">.com</div>
+                </div>
+            </div>
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInput">Title</label>
                 <input type="text" class="form-control" id="autoSizingInput" placeholder="Book Title">
@@ -151,7 +167,6 @@
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInputGroup">Page Count</label>
                 <div class="input-group">
-                    <!-- <div class="input-group-text">@</div> -->
                     <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Page Count">
                 </div>
             </div>
@@ -167,10 +182,11 @@
                 <div class="form-check">
                 </div>
             </div>
+            <!-- submit button for form-->
             <div class="d-flex justify-content-center">
-                    <div class="d-grid gap-2 col-2 mx-auto">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
+                <div class="d-grid gap-2 col-2 mx-auto">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </div>
         </form>
     </div>
