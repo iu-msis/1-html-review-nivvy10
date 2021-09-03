@@ -175,10 +175,19 @@ h6 {
 .left-padding{
     padding-left: 50px;
 }
-.books-bg{
-    background-image: url('https://pangaeasbox.github.io/images/bg.jpg');
-}
+
 #book-img{
     width: 100px;
     height: 150px;
+}
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+    background-color: #fff;
+}
+.welcome-body{
+    background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGlicmFyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+}
+.container{
+    background-color: white;
 }
