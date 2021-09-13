@@ -29,7 +29,7 @@
 <body>
     <!-- Table with Book Details -->
     <div class="padding">
-        <table class="table table-bordered border-primary">
+        <table id="table-id" class="table table-bordered border-primary">
             <!-- Table Column Headers -->
             <thead class="p-3 mb-2 bg-primary text-white">
                 <tr>
@@ -191,6 +191,12 @@
             </div>
         </form>
     </div>
+    <!-- Table sort plugin from http://tristen.ca/tablesort/demo/ -->
+    <script src="js/tablesort.min.js"></script>
+    <script>
+        new Tablesort(document.getElementById('table-id'));
+      </script>
+
 </body>
 
 </html>
