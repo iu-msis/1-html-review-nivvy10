@@ -1,0 +1,46 @@
+{
+ "offers": [
+{
+    "id":"01",
+    "salary":"20000",
+    "bonus":"2000",
+    "company":"Deloitte",
+    "offerDate":"06/10/2021"
+
+},
+{
+    "id":"02",
+    "salary":"50000",
+    "bonus":"4000",
+    "company":"EY",
+    "offerDate":"08/11/2021"
+
+},
+{
+    "id":"03",
+    "salary":"70000",
+    "bonus":"5000",
+    "company":"IBM",
+    "offerDate":"07/10/2021"
+
+},
+{
+    "id":"04",
+    "salary":"90000",
+    "bonus":"7000",
+    "company":"Google",
+    "offerDate":"12/10/2021"
+
+},
+{
+    "id":"05",
+    "salary":"100000",
+    "bonus":"000",
+    "company":"Deloitte",
+    "offerDate":"05/10/2021"
+
+}
+ ]
+    
+}
+

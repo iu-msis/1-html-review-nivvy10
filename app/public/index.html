@@ -47,17 +47,17 @@
   <!-- Bootstrap Profile container with user details -->
   <div class="page-content page-container" id="page-content">
     <div class="padding">
-      <div class="row container d-flex justify-content-center">
+      <div class="row container d-flex justify-content-center" id="counter">
         <div class="col-xl-8 col-md-12">
           <div class="card user-card-full">
             <div class="row m-l-0 m-r-0">
               <div class="col-sm-4 bg-c-lite-green user-profile">
                 <div class="card-block text-center text-white">
                   <!-- Image url from randomuser website -->
-                  <div class="m-b-25"> <a href="https://randomuser.me/api/portraits/men/31.jpg"><img
-                        src="https://randomuser.me/api/portraits/men/31.jpg" class="img-radius"
+                  <div class="m-b-25"> <a v-bind:href="imagelink"><img
+                    v-bind:src="imagelink" class="img-radius"
                         alt="User-Profile-Image"></a> </div>
-                  <h6 class="f-w-600">Ivan Gomez, 42</h6>
+                  <h6 class="f-w-600" id="user-name">{{fullname}}, {{age}}</h6>
                   <p>Web Designer</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                 </div>
               </div>
@@ -68,26 +68,26 @@
                   <div class="row">
                     <div class="col-sm-6">
                       <p class="m-b-10 f-w-600 text-primary ">Origin</p>
-                      <h6 class="text-muted f-w-400">Mexico</h6>
+                      <h6 class="text-muted f-w-400">{{origin}}</h6>
                     </div>
                     <div class="col-sm-6">
                       <p class="m-b-10 f-w-600 text-primary">Birthdate</p>
-                      <h6 class="text-muted f-w-400">7/4/1979</h6>
+                      <h6 class="text-muted f-w-400">{{dob}}</h6>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-6">
                       <p class="m-b-10 f-w-600 text-primary">Address</p>
-                      <h6 class="text-muted f-w-400">321 Walnut Hill Ln</h6>
+                      <h6 class="text-muted f-w-400">{{address}}</h6>
                     </div>
                     <div class="col-sm-6">
                       <p class="m-b-10 f-w-600 text-primary">Phone</p>
-                      <h6 class="text-muted f-w-400">(909)-281-2479</h6>
+                      <h6 class="text-muted f-w-400">{{phone}}</h6>
                     </div>
                   </div>
-                  <div class="col-sm-8">
+                  <div class="col-sm-10">
                     <p class="m-b-10 f-w-600 text-primary">Email</p>
-                    <h6 class="text-muted f-w-400"><a class="text-muted f-w-400" href="mailto: ivan.gomez@example.com">ivan.gomez@example.com</a>
+                    <h6 class="text-muted f-w-400"><a class="text-muted f-w-400" href="mailto: ivan.gomez@example.com">{{email}}</a>
                     </h6>
                   </div>
                 </div>
@@ -98,6 +98,8 @@
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="js/books.js"></script>
 </body>
 
 </html>
