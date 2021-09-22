@@ -13,6 +13,11 @@ const Counter = {
         address: "",
       }
     },
+    computed:{
+      prettyBirthday(){
+          return dayjs(this.result.dob.date).format('DD MMM YYYY');
+      }
+    },
       created() {
         fetch('https://randomuser.me/api/', {
           // headers: { 'Content-type': 'application/json' },
@@ -25,9 +30,10 @@ const Counter = {
           this.age = this.result.dob.age;
           this.phone = this.result.phone;
           this.origin = this.result.location.country;
-          this.dob = this.result.dob.date;
-          this.dob = this.dob.split("T");
-          this.dob = this.dob[0];
+          // this.dob = this.result.dob.date;
+          // this.dob = prettyBirthday();
+          // this.dob = this.dob.split("T");
+          // this.dob = this.dob[0];
           this.email = this.result.email;
           this.address = this.result.location.street.number +" "+ this.result.location.street.name +", "+ this.result.location.state+" "+ this.result.location.postcode
           this.imagelink = this.result.picture.large;
