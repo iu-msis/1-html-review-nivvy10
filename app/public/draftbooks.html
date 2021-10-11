@@ -1,0 +1,205 @@
+<!-- 
+  Nivedita Rao
+  MSIS - D&S HW#1: Git & HTML Review
+ -->
+ <!doctype html>
+ <html>
+ 
+ <head>
+     <title>Book Library</title>
+     <!-- Adding CSS stylesheets -->
+     <link rel="stylesheet" href="css/styles.css">
+     <!-- Bootstrap V6 -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+         crossorigin="anonymous"></script>
+     <!-- Nav Bar -->
+     <div class="container">
+         <header class="d-flex justify-content-center py-3 mb-4 border-bottom">
+             <ul class="nav nav-pills">
+                 <li class="nav-item"><a href="welcome.html" class="nav-link" aria-current="page">Home</a></li>
+                 <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">User</a></li>
+                 <li class="nav-item"><a href="books.html" class="nav-link active">Books</a></li>
+             </ul>
+         </header>
+     </div>
+ </head>
+ <body>
+     <!-- Table with Book Details -->
+     <div class="padding">
+         <table id="table-id" class="table table-bordered border-primary">
+             <!-- Table Column Headers -->
+             <thead class="p-3 mb-2 bg-primary text-white">
+                 <tr>
+                     <th scope="col">#</th>
+                     <th scope="col">Image</th>
+                     <th scope="col">Title</th>
+                     <th scope="col">Author(s)</th>
+                     <th scope="col">Year Published</th>
+                     <th scope="col">Page Count</th>
+                     <th scope="col">MSRP</th>
+                 </tr>
+             </thead>
+             <!-- Adding Book information -->
+             <tbody>
+                 <tr>
+                     <th scope="row">1</th>
+                     <td><a href="https://images.gr-assets.com/books/1371652590m/15839984.jpg"><img id="book-img"
+                                 src="https://images.gr-assets.com/books/1371652590m/15839984.jpg"></a></td>
+                     <td>Cruel Beauty</td>
+                     <td>Rosamund Hodge</td>
+                     <td>2014</td>
+                     <td>201</td>
+                     <td>6.50 $</td>
+                 </tr>
+                 <tr>
+                     <th scope="row">2</th>
+                     <td><a href="https://images-na.ssl-images-amazon.com/images/I/515dn0G7urL.jpg"><img id="book-img"
+                                 src="https://images-na.ssl-images-amazon.com/images/I/515dn0G7urL.jpg"></a></td>
+                     <td>A Beautiful Mind</td>
+                     <td>Sylvia Nasar</td>
+                     <td>1998</td>
+                     <td>175</td>
+                     <td>12.99 $</td>
+                 </tr>
+                 <tr>
+                     <th scope="row">3</th>
+                     <td><a
+                             href="https://images-na.ssl-images-amazon.com/images/I/51gHjDpGdvL._SX312_BO1,204,203,200_.jpg"><img
+                                 id="book-img"
+                                 src="https://images-na.ssl-images-amazon.com/images/I/51gHjDpGdvL._SX312_BO1,204,203,200_.jpg"></a>
+                     </td>
+ 
+                     <td>The Voyages of Doctor Dolittle</td>
+                     <td>Hugh Lofting, Michael Hague</td>
+                     <td>1922</td>
+                     <td>255</td>
+                     <td>13.50 $</td>
+                 </tr>
+                 <tr>
+                     <th scope="row">4</th>
+                     <td><a href="https://images-na.ssl-images-amazon.com/images/I/71Zke+xZ+2L.jpg"><img id="book-img"
+                                 src="https://images-na.ssl-images-amazon.com/images/I/71Zke+xZ+2L.jpg"></a></td>
+ 
+                     <td>Blaze</td>
+                     <td>Richard Bachman, Stephen King</td>
+                     <td>2007</td>
+                     <td>370</td>
+                     <td>15.50 $</td>
+                 </tr>
+                 <tr>
+                     <th scope="row">5</th>
+                     <td><a
+                             href="https://images-na.ssl-images-amazon.com/images/I/514bBOeVp4L._SX303_BO1,204,203,200_.jpg"><img
+                                 id="book-img"
+                                 src="https://images-na.ssl-images-amazon.com/images/I/514bBOeVp4L._SX303_BO1,204,203,200_.jpg"></a>
+                     </td>
+ 
+                     <td>The Portrait of a Lady</td>
+                     <td>Henry James, Patricia Crick</td>
+                     <td>1881</td>
+                     <td>363</td>
+                     <td>11.00 $</td>
+                 </tr>
+                 <tr>
+                     <th scope="row">6</th>
+                     <td><a href="https://m.media-amazon.com/images/I/5173hbKPVDL.jpg"><img id="book-img"
+                                 src="https://m.media-amazon.com/images/I/5173hbKPVDL.jpg"></a></td>
+ 
+                     <td>The Time Paradox</td>
+                     <td>Eoin Colfer</td>
+                     <td>2008</td>
+                     <td>426</td>
+                     <td>17.95 $</td>
+                 </tr>
+                 <tr>
+                     <th scope="row">7</th>
+                     <td><a href="https://images-na.ssl-images-amazon.com/images/I/81LSr4CwBhL.jpg"><img id="book-img"
+                                 src="https://images-na.ssl-images-amazon.com/images/I/81LSr4CwBhL.jpg"></a></td>
+ 
+                     <td>Unnatural Exposure</td>
+                     <td>Patricia Cornwell</td>
+                     <td>1997</td>
+                     <td>322</td>
+                     <td>14.95 $</td>
+                 </tr>
+                 <tr>
+                     <th scope="row">8</th>
+                     <td><a href="https://images.penguinrandomhouse.com/cover/9780345539434"><img id="book-img"
+                                 src="https://images.penguinrandomhouse.com/cover/9780345539434"></a></td>
+ 
+                     <td>Cosmos</td>
+                     <td>Carl Sagan</td>
+                     <td>1980</td>
+                     <td>220</td>
+                     <td>7.95 $</td>
+                 </tr>
+             </tbody>
+         </table>
+     </div>
+     <!-- Form to enter new book details -->
+     <div class="left-padding">
+         <form class="row gy-2 gx-3 align-items-center">
+             <div class="col-auto">
+                 <label class="visually-hidden" for="autoSizingInput">Image URL</label>
+                 <div class="input-group">
+                     <input type="text" class="form-control" id="autoSizingInput" placeholder="Book Image Url">
+                     <div class="input-group-text">.com</div>
+                 </div>
+             </div>
+             <div class="col-auto">
+                 <label class="visually-hidden" for="autoSizingInput">Title</label>
+                 <input type="text" class="form-control" id="autoSizingInput" placeholder="Book Title">
+             </div>
+             <div class="col-auto">
+                 <label class="visually-hidden" for="autoSizingInputGroup">Author(s)</label>
+                 <div class="input-group">
+                     <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Author">
+                 </div>
+             </div>
+             <div class="col-auto">
+                 <label class="visually-hidden" for="autoSizingInputGroup">Year Published</label>
+                 <div class="input-group">
+                     <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Year Published">
+                 </div>
+             </div>
+             <div class="col-auto">
+                 <label class="visually-hidden" for="autoSizingInputGroup">Page Count</label>
+                 <div class="input-group">
+                     <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Page Count">
+                 </div>
+             </div>
+             <div class="col-auto">
+                 <label class="visually-hidden" for="autoSizingInputGroup">MSRP</label>
+                 <div class="input-group">
+                     <div class="input-group-text">$</div>
+                     <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Price">
+                 </div>
+             </div>
+ 
+             <div class="col-auto">
+                 <div class="form-check">
+                 </div>
+             </div>
+             <!-- submit button for form-->
+             <div class="d-flex justify-content-center">
+                 <div class="d-grid gap-2 col-2 mx-auto">
+                     <button type="submit" class="btn btn-primary">Submit</button>
+                 </div>
+             </div>
+         </form>
+     </div>
+ 
+ 
+     <!-- Table sort plugin from http://tristen.ca/tablesort/demo/ -->
+     <script src="js/tablesort.min.js"></script>
+     <script src="https://unpkg.com/vue@next"></script>
+     <script src="js/books.js"></script>
+     <script>
+         new Tablesort(document.getElementById('table-id'));
+     </script>
+ </body>
+ 
+ </html>

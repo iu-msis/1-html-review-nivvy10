@@ -173,8 +173,12 @@ h6 {
     color: gray;
 }
 .left-padding{
-    padding-left: 50px;
+    padding-left: 30px;
+
 }
+/* .top-padding{
+    margin-top: 50px;
+} */
 
 #book-img{
     width: 100px;
@@ -227,3 +231,24 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
+/* ------------------------------------------------------------- */
+/* Books API */
+.books {
+    margin: 10px 2px;
+    padding: 4px;
+    border: 1px solid gray;
+    background-color: antiquewhite;
+}
+
+.selected {
+    background-color: burlywood;
+}
+
+
+/* .userName {
+    font-weight:bold;
+}
+
+.studentName{
+    color:#999;
+} */
