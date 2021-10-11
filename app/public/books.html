@@ -28,9 +28,9 @@
 </head>
 <body>
     <!-- Table with Book Details -->
-    <div id="offerApp" class="container">
+    <div id="offerApp" class="container top-padding">
         <div class="row align-items-start">
-          <div class="col col-4 bookbox">
+          <div class="col col-3 bookbox">
             <div v-for="s in books" v-on:click="selectBook(s)"
              :class="['books', {selected: selectedBook && s.id == selectedBook.id}]">
               <strong>{{ s.title }}</strong><br>
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div  class="col col-8" v-if="selectedBook">
-            <h1>Book Details for {{ selectedBook.title }}</h1>
+            <h1 class="btitle">Book Details for <span class="text-primary">{{ selectedBook.title }}</span></h1>
 
             <table class="table">
               <thead>
@@ -75,7 +75,7 @@
 
     <!-- Form to enter new book details -->
     <div class="left-padding">
-        <form class="row gy-2 gx-3 align-items-center top-padding">
+        <form class="row gy-2 gx-3 align-items-center">
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInput">Image URL</label>
                 <div class="input-group">

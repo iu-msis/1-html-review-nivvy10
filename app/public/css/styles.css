@@ -176,9 +176,10 @@ h6 {
     padding-left: 30px;
 
 }
-/* .top-padding{
+.top-padding{
     margin-top: 50px;
-} */
+    margin-bottom: 50px;
+}
 
 #book-img{
     width: 100px;
@@ -237,13 +238,15 @@ th[role=columnheader]:not(.no-sort):hover:after {
     margin: 10px 2px;
     padding: 4px;
     border: 1px solid gray;
-    background-color: antiquewhite;
+    background-color: #a6c1e9;
 }
 
 .selected {
-    background-color: burlywood;
+    background-color: #f18192;
 }
-
+.btitle{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 /* .userName {
     font-weight:bold;
