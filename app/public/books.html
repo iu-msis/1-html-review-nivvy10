@@ -28,7 +28,7 @@
 </head>
 <body>
     <!-- Table with Book Details -->
-    <div id="offerApp" class="container top-padding">
+    <div id="offerApp" class="container">
         <div class="row align-items-start">
           <div class="col col-3 bookbox">
             <div v-for="s in books" v-on:click="selectBook(s)"
@@ -71,45 +71,45 @@
 
         </div>
 
-      </div>
+    
 
     <!-- Form to enter new book details -->
-    <div class="left-padding">
-        <form class="row gy-2 gx-3 align-items-center">
+    <div class="top-padding">
+        <form class="row gy-2 gx-3 align-items-center" v-on:submit.prevent="postOffer">
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInput">Image URL</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="autoSizingInput" placeholder="Book Image Url">
-                    <div class="input-group-text">.com</div>
+                    <input type="text"  v-model="offerForm.image" class="form-control" id="autoSizingInput" placeholder="Book Image Url">
+                    <!-- <div class="input-group-text">.com</div> -->
                 </div>
             </div>
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInput">Title</label>
-                <input type="text" class="form-control" id="autoSizingInput" placeholder="Book Title">
+                <input type="text" v-model="offerForm.title" class="form-control" id="autoSizingInput" placeholder="Book Title">
             </div>
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInputGroup">Author(s)</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Author">
+                    <input type="text" v-model="offerForm.author" class="form-control" id="autoSizingInputGroup" placeholder="Author">
                 </div>
             </div>
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInputGroup">Year Published</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Year Published">
+                    <input type="text" v-model="offerForm.yearPublished" class="form-control" id="autoSizingInputGroup" placeholder="Year Published">
                 </div>
             </div>
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInputGroup">Page Count</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Page Count">
+                    <input type="text" v-model="offerForm.pageCount" class="form-control" id="autoSizingInputGroup" placeholder="Page Count">
                 </div>
             </div>
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInputGroup">MSRP</label>
                 <div class="input-group">
                     <div class="input-group-text">$</div>
-                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Price">
+                    <input type="text" v-model="offerForm.msrp" class="form-control" id="autoSizingInputGroup" placeholder="Price">
                 </div>
             </div>
 
@@ -118,14 +118,15 @@
                 </div>
             </div>
             <!-- submit button for form-->
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center top-padding">
                 <div class="d-grid gap-2 col-2 mx-auto">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                    <button type="button" v-on:click="resetOfferForm" class="btn btn-outline-primary btn-sm">Cancel</button>
                 </div>
             </div>
         </form>
     </div>
-
+</div>
 
     <!-- Table sort plugin from http://tristen.ca/tablesort/demo/ -->
     <script src="js/tablesort.min.js"></script>

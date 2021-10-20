@@ -5,7 +5,8 @@ const SomeApp = {
         students: [],
         selectedStudent: null,
         offers: [],
-        offerForm: {}
+        offerForm: {},
+        selectedOffer: null
       }
     },
     computed: {},
@@ -52,11 +53,42 @@ const SomeApp = {
                 console.error(error);
             });
         },
-        postNewOffer(evt) {
-          this.offerForm.studentId = this.selectedStudent.studentId;
-  
-          console.log("Posting:", JSON.stringify(this.offerForm));
+        postOffer(evt) {
+            console.log ("Test:", this.selectedOffer);
+          if (this.selectedOffer === null) {
+              this.postNewOffer(evt);
+          } else {
+              this.postEditOffer(evt);
+          }
+        },
+        postEditOffer(evt) {
+          this.offerForm.studentId = this.selectedOffer.id;
+          this.offerForm.id = this.selectedOffer.id;        
           
+          console.log("Updating!", this.offerForm);
+  
+          fetch('api/offer/update.php', {
+              method:'POST',
+              body: JSON.stringify(this.offerForm),
+              headers: {
+                "Content-Type": "application/json; charset=utf-8"
+              }
+            })
+            .then( response => response.json() )
+            .then( json => {
+              console.log("Returned from post:", json);
+              // TODO: test a result was returned!
+              this.offers = json;
+              
+              // reset the form
+              this.resetOfferForm();
+            });
+        },
+        postNewOffer(evt) {
+          this.offerForm.studentId = this.selectedStudent.id;        
+          console.log(this.offerForm.studentId);
+          console.log("Creating!", this.offerForm);
+  
           fetch('api/offer/create.php', {
               method:'POST',
               body: JSON.stringify(this.offerForm),
@@ -68,10 +100,19 @@ const SomeApp = {
             .then( json => {
               console.log("Returned from post:", json);
               // TODO: test a result was returned!
-              this.offers.push(json[0]);
-  
-              this.offerForm = {};
+              this.offers = json;
+              
+              // reset the form
+              this.resetOfferForm();
             });
+        },
+        selectOfferToEdit(offer) {
+            this.selectedOffer = offer;
+            this.offerForm = Object.assign({}, this.selectedOffer);
+        },
+        resetOfferForm() {
+            this.selectedOffer = null;
+            this.offerForm = {};
         }
     },
     created() {
@@ -79,4 +120,5 @@ const SomeApp = {
     }
   
   }
+  
   Vue.createApp(SomeApp).mount('#offerApp');

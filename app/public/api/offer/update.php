@@ -1,5 +1,10 @@
 <?php
 
+// if (($_SERVER['REQUEST_METHOD'] ?? '') != 'POST') {
+//     header($_SERVER["SERVER_PROTOCOL"] . " 405 Method Not Allowed");
+//     exit;
+// }
+
 try {
     $_POST = json_decode(
                 file_get_contents('php://input'), 
@@ -14,13 +19,7 @@ try {
     exit;
 }
 
-// if (($_SERVER['REQUEST_METHOD'] ?? '') != 'POST') {
-//     header($_SERVER["SERVER_PROTOCOL"] . " 405 Method Not Allowed");
-//     exit;
-// }
-
 require("class/DbConnection.php");
-
 
 // Step 0: Validate the incoming data
 // This code doesn't do that, but should ...
@@ -32,16 +31,20 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'INSERT INTO offer (studentId, companyName, salary, bonus, offerDate)
-  VALUES (?, ?, ?, ?, ?)'
+  'UPDATE offer SET 
+    companyName = ?,
+    salary = ?,
+    bonus = ?,
+    offerDate = ?
+  WHERE id = ?'
 );
 
 $stmt->execute([
-  $_POST['studentId'],
   $_POST['companyName'],
   $_POST['salary'],
   $_POST['bonus'],
-  $_POST['offerDate']
+  $_POST['offerDate'],
+  $_POST['id']
 ]);
 
 // Get auto-generated PK from DB

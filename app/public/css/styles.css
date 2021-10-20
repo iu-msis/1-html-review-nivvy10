@@ -174,7 +174,12 @@ h6 {
 }
 .left-padding{
     padding-left: 30px;
-
+}
+.bottom-padding{
+    padding-bottom: 50px;
+}
+.top-padding{
+    padding-top: 10px;
 }
 .top-padding{
     margin-top: 50px;
