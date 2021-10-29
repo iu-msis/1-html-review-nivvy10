@@ -53,6 +53,7 @@ INSERT INTO books(id,image,title,author,yearPublished,pageCount,msrp) Values
 (7,'https://images-na.ssl-images-amazon.com/images/I/81LSr4CwBhL.jpg','Unnatural Exposure','Patricia Cornwell',1997,322,'14.95'),
 (8,'https://images.penguinrandomhouse.com/cover/9780345539434','Cosmos','Carl Sagan',1980,220,'7.95')
 ;
+Select * From books;
 
 -- COMMIT;
 

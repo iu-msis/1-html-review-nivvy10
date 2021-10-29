@@ -31,24 +31,11 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'UPDATE books SET 
-    image = ?,
-    title = ?,
-    author = ?,
-    yearPublished = ?,
-    pageCount = ?,
-    msrp = ?
-  WHERE id = ?'
+  'DELETE FROM books WHERE id = ?'
 );
 
 $stmt->execute([
-  $_POST['image'],
-  $_POST['title'],
-  $_POST['author'],
-  $_POST['yearPublished'],
-  $_POST['pageCount'],
-  $_POST['msrp'],
-  $_POST['id'],
+  $_POST['id']
 ]);
 
 // Get auto-generated PK from DB

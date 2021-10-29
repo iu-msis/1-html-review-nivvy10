@@ -59,6 +59,14 @@
                         <td>{{ selectedBook.yearPublished }}</td>
                         <td>{{ selectedBook.pageCount }}</td>
                         <td>{{ prettyDollar(selectedBook.msrp) }}</td>
+                        <td>
+                                <button type="button" 
+                                  class="btn btn-primary btn-sm"
+                                  v-on:click="selectOfferToEdit">Edit</button>
+                        </td>
+                                        <td>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"  v-on:click="postDeleteOffer">Delete</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -79,7 +87,7 @@
             <div class="col-auto">
                 <label class="visually-hidden" for="autoSizingInput">Image URL</label>
                 <div class="input-group">
-                    <input type="text"  v-model="offerForm.image" class="form-control" id="autoSizingInput" placeholder="Book Image Url">
+                    <input type="text" v-model="offerForm.image" class="form-control" id="autoSizingInput" placeholder="Book Image Url">
                     <!-- <div class="input-group-text">.com</div> -->
                 </div>
             </div>
@@ -120,8 +128,8 @@
             <!-- submit button for form-->
             <div class="d-flex justify-content-center top-padding">
                 <div class="d-grid gap-2 col-2 mx-auto">
-                    <button type="submit" class="btn btn-primary">Add Book</button>
-                    <button type="button" v-on:click="resetOfferForm" class="btn btn-outline-primary btn-sm">Cancel</button>
+                    <button type="submit" class="btn btn-primary">{{ selectedBook === null ? "Add " : "Edit " }}  Book</button>
+                    <button type="button" class="btn btn-outline-secondary" v-if="selectedBook" v-on:click="resetOfferForm">Cancel</button>
                 </div>
             </div>
         </form>

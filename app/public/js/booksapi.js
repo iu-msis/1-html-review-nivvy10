@@ -73,7 +73,7 @@ const SomeApp = {
         .then(json => {
           console.log("Returned from post:", json);
           // TODO: test a result was returned!
-          this.bookDetails = json;
+          this.books = json;
 
           // reset the form
           this.resetOfferForm();
@@ -101,8 +101,33 @@ const SomeApp = {
           this.resetOfferForm();
         });
     },
-    selectOfferToEdit(book) {
-      this.selectedBook = book;
+    postDeleteOffer() {
+      // this.offerForm = Object.assign({}, this.selectedBook);
+      // this.offerForm.id = this.selectedBook.id;
+      if (!confirm("Are you sure you want to delete this book?", this.selectedBook.title)) {
+        return;
+      }
+      console.log("Delete!", this.selectedBook);
+
+      fetch('api/books/delete.php', {
+          method:'POST',
+          body: JSON.stringify(this.offerForm),
+          headers: {
+            "Content-Type": "application/json; charset=utf-8"
+          }
+        })
+        .then( response => response.json() )
+        .then( json => {
+          console.log("Returned from post:", json);
+          // TODO: test a result was returned!
+          this.books = json;
+
+          // reset the form
+          this.resetOfferForm();
+        });
+    },
+    selectOfferToEdit() {
+      //this.selectedBook = book;
       this.offerForm = Object.assign({}, this.selectedBook);
     },
     resetOfferForm() {
